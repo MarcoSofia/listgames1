@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ta_game")
+@Table(name = "tb_game")
 public class Game {
 	
 	@Id
@@ -20,25 +20,29 @@ public class Game {
 	
 	@Column(name = "game_year")
 	private Integer year;
-	private String gerre;
-	private String plataforms;
+	private String genre;
+	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 
 	public Game() {
 
 	}
 
-	public Game(Long id, String title, Integer year, String gerre, String plataforms, Double score, String imgUrl,
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 
 		this.id = id;
 		this.title = title;
 		this.year = year;
-		this.gerre = gerre;
-		this.plataforms = plataforms;
+		this.genre = genre;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -69,20 +73,20 @@ public class Game {
 		this.year = year;
 	}
 
-	public String getGerre() {
-		return gerre;
+	public String getGenre() {
+		return genre;
 	}
 
-	public void setGerre(String gerre) {
-		this.gerre = gerre;
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
 
-	public String getPlataforms() {
-		return plataforms;
+	public String getPlatforms() {
+		return platforms;
 	}
 
-	public void setPlataforms(String plataforms) {
-		this.plataforms = plataforms;
+	public void setPlataforms(String platforms) {
+		this.platforms = platforms;
 	}
 
 	public Double getScore() {
