@@ -1,0 +1,225 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_IN_PAGE_ERROR (0xc0000006) at pc=0x00007ffad37a16e9, pid=6168, tid=9892
+#
+# JRE version:  (16.0.1+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (16.0.1+9-24, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [VCRUNTIME140.dll+0x16e9]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50752 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=dslist -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages com.marcossofia.dslist.DslistApplicationGame --spring.output.ansi.enabled=always
+
+Host: Intel(R) Celeron(R) CPU N3350 @ 1.10GHz, 2 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2788)
+Time: Thu May 11 01:25:07 2023 Hora padrão América do Sul Or. elapsed time: 0.169031 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x0000009945100000,0x0000009945200000],  sp=0x00000099451fefc0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [VCRUNTIME140.dll+0x16e9]
+V  [jvm.dll+0x68ab03]
+V  [jvm.dll+0x689815]
+V  [jvm.dll+0x68938e]
+V  [jvm.dll+0x360f27]
+V  [jvm.dll+0x77a7dc]
+V  [jvm.dll+0x3e55af]
+V  [jvm.dll+0x3e7081]
+C  [jli.dll+0x52fb]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17604]
+C  [ntdll.dll+0x526a1]
+
+
+siginfo: EXCEPTION_IN_PAGE_ERROR (0xc0000006), writing address 0x000001b23b810000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000001b23b810000, RCX=0x0000000000010000, RDX=0x0000000000000000
+RSP=0x00000099451fefc0, RBP=0x000001b23d819b30, RSI=0x000001b23b617ff0, RDI=0x000001b23b810000
+R8 =0x0000000000010000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x000001b23b810000
+R12=0x00007ffa9a8d3630, R13=0x00007ffa9ac0aa08, R14=0x000001b23d80b050, R15=0x0000000000010000
+RIP=0x00007ffad37a16e9, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000099451fefc0)
+0x00000099451fefc0:   0000000000000000 00007ffa9a94ab03
+0x00000099451fefd0:   000001b23d819b30 000001b200000000
+0x00000099451fefe0:   000001b23b617ff0 000000000000014c
+0x00000099451feff0:   0000000000010000 00000099451ff010
+0x00000099451ff000:   00000099451ff290 0000000000000104
+0x00000099451ff010:   0000010100000103 000001b23d819b34
+0x00000099451ff020:   0000000000000080 0000000000000002
+0x00000099451ff030:   000001b23b5f0000 00000099451ff0f9
+0x00000099451ff040:   0000000000000009 00007ffadeb7b3c7
+0x00000099451ff050:   000001b23b5e0000 00007ffa00000000
+0x00000099451ff060:   0000000000000080 0000000000000000
+0x00000099451ff070:   00000000005c3a43 0000000000000040
+0x00000099451ff080:   000000023b5e02b8 000001b23b5e0000
+0x00000099451ff090:   000001b23b5e0de0 000001b23d818b20
+0x00000099451ff0a0:   000001b23b5ff680 0000000000000000
+0x00000099451ff0b0:   0000000000200029 00000000000000dd 
+
+Instructions: (pc=0x00007ffad37a16e9)
+0x00007ffad37a15e9:   ff ff 0f 1f 44 00 00 49 03 c8 0f 10 44 11 f0 48
+0x00007ffad37a15f9:   83 e9 10 49 83 e8 10 f6 c1 0f 74 17 48 8b c1 48
+0x00007ffad37a1609:   83 e1 f0 0f 10 c8 0f 10 04 11 0f 11 08 4c 8b c1
+0x00007ffad37a1619:   4d 2b c3 4d 8b c8 49 c1 e9 07 74 68 0f 29 01 eb
+0x00007ffad37a1629:   0d 66 0f 1f 44 00 00 0f 29 41 10 0f 29 09 0f 10
+0x00007ffad37a1639:   44 11 f0 0f 10 4c 11 e0 48 81 e9 80 00 00 00 0f
+0x00007ffad37a1649:   29 41 70 0f 29 49 60 0f 10 44 11 50 0f 10 4c 11
+0x00007ffad37a1659:   40 49 ff c9 0f 29 41 50 0f 29 49 40 0f 10 44 11
+0x00007ffad37a1669:   30 0f 10 4c 11 20 0f 29 41 30 0f 29 49 20 0f 10
+0x00007ffad37a1679:   44 11 10 0f 10 0c 11 75 ae 0f 29 41 10 49 83 e0
+0x00007ffad37a1689:   7f 0f 28 c1 4d 8b c8 49 c1 e9 04 74 1a 66 66 0f
+0x00007ffad37a1699:   1f 84 00 00 00 00 00 0f 11 01 48 83 e9 10 0f 10
+0x00007ffad37a16a9:   04 11 49 ff c9 75 f0 49 83 e0 0f 74 08 41 0f 10
+0x00007ffad37a16b9:   0a 41 0f 11 0b 0f 11 01 49 8b c3 c3 cc cc cc cc
+0x00007ffad37a16c9:   cc cc cc cc cc cc cc cc cc cc cc cc cc 66 66 0f
+0x00007ffad37a16d9:   1f 84 00 00 00 00 00 57 8b c2 48 8b f9 49 8b c8
+0x00007ffad37a16e9:   f3 aa 49 8b c3 5f c3 cc cc cc cc cc cc 66 66 0f
+0x00007ffad37a16f9:   1f 84 00 00 00 00 00 4c 8b d9 0f b6 d2 49 b9 01
+0x00007ffad37a1709:   01 01 01 01 01 01 01 4c 0f af ca 49 83 f8 10 0f
+0x00007ffad37a1719:   86 f2 00 00 00 66 49 0f 6e c1 66 0f 60 c0 49 81
+0x00007ffad37a1729:   f8 80 00 00 00 77 10 e9 6b 00 00 00 66 66 66 0f
+0x00007ffad37a1739:   1f 84 00 00 00 00 00 f6 05 75 2c 01 00 02 75 97
+0x00007ffad37a1749:   0f 11 01 4c 03 c1 48 83 c1 10 48 83 e1 f0 4c 2b
+0x00007ffad37a1759:   c1 4d 8b c8 49 c1 e9 07 74 3d 4c 3b 0d be 28 01
+0x00007ffad37a1769:   00 0f 87 60 00 00 00 0f 29 01 0f 29 41 10 48 81
+0x00007ffad37a1779:   c1 80 00 00 00 0f 29 41 a0 0f 29 41 b0 49 ff c9
+0x00007ffad37a1789:   0f 29 41 c0 0f 29 41 d0 0f 29 41 e0 66 0f 29 41
+0x00007ffad37a1799:   f0 75 d4 49 83 e0 7f 4d 8b c8 49 c1 e9 04 74 13
+0x00007ffad37a17a9:   0f 1f 80 00 00 00 00 0f 11 01 48 83 c1 10 49 ff
+0x00007ffad37a17b9:   c9 75 f4 49 83 e0 0f 74 06 42 0f 11 44 01 f0 49
+0x00007ffad37a17c9:   8b c3 c3 0f 1f 40 00 0f 2b 01 0f 2b 41 10 48 81
+0x00007ffad37a17d9:   c1 80 00 00 00 0f 2b 41 a0 0f 2b 41 b0 49 ff c9 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Not initialized>
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6c4790000 - 0x00007ff6c479e000 	F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\javaw.exe
+0x00007ffadeb50000 - 0x00007ffaded48000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffadcc90000 - 0x00007ffadcd4f000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffadc8a0000 - 0x00007ffadcb7a000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffadc530000 - 0x00007ffadc630000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffad3780000 - 0x00007ffad3798000 	F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\jli.dll
+0x00007ffadd360000 - 0x00007ffadd4fd000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffadcb80000 - 0x00007ffadcba2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffadd880000 - 0x00007ffadd8ab000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffadc790000 - 0x00007ffadc8a0000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffadc3f0000 - 0x00007ffadc48d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffad37a0000 - 0x00007ffad37b9000 	F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\VCRUNTIME140.dll
+0x00007ffadb3a0000 - 0x00007ffadb63a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffadd7e0000 - 0x00007ffadd87e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffadd200000 - 0x00007ffadd230000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffad8ff0000 - 0x00007ffad8ffc000 	F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\vcruntime140_1.dll
+0x00007ffab5880000 - 0x00007ffab5911000 	F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\msvcp140.dll
+0x00007ffa9a2c0000 - 0x00007ffa9ae6b000 	F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\server\jvm.dll
+0x00007ffadcd50000 - 0x00007ffadcdfe000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffadcfe0000 - 0x00007ffadd07c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffadd6b0000 - 0x00007ffadd7d6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffadd1f0000 - 0x00007ffadd1f8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffac6e70000 - 0x00007ffac6e79000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffadd8b0000 - 0x00007ffadd91b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffab76d0000 - 0x00007ffab76f7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffaca070000 - 0x00007ffaca07a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffada450000 - 0x00007ffada462000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffad93a0000 - 0x00007ffad93aa000 	F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\jimage.dll
+0x00007ffadbce0000 - 0x00007ffadbec4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffadb980000 - 0x00007ffadb9b4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffadc260000 - 0x00007ffadc2e2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;F:\sts-4.11.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50752 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=dslist -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: com.marcossofia.dslist.DslistApplicationGame --spring.output.ansi.enabled=always
+java_class_path (initial): D:\DEVESUPERIOR_2023_05\PROGETOS_DEV_2023\dslist\target\classes;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.0.6\spring-boot-starter-data-jpa-3.0.6.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.0.6\spring-boot-starter-aop-3.0.6.jar;C:\Users\user\.m2\repository\org\springframework\spring-aop\6.0.8\spring-aop-6.0.8.jar;C:\Users\user\.m2\repository\org\aspectj\aspectjweaver\1.9.19\aspectjweaver-1.9.19.jar;C:\Users\user\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.0.6\spring-boot-starter-jdbc-3.0.6.jar;C:\Users\user\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\user\.m2\repository\org\springframework\spring-jdbc\6.0.8\spring-jdbc-6.0.8.jar;C:\Users\user\.m2\repository\org\hibernate\orm\hibernate-core\6.1.7.Final\hibernate-core-6.1.7.Final.jar;C:\Users\user\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\user\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\user\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\user\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\user\.m2\repository\org\jboss\jandex\2.4.2.Final\jandex-2.4.2.Final.jar;C:\Users\user\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\user\.m2\repository\net\bytebuddy\byte-buddy\1.12.23\byte-buddy-1.12.23.jar;C:\Users\user\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\user\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\user\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\user\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\user\.m2\repository\com\sun\istac
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 64370432                                  {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1029926912                                {product} {ergonomic}
+   size_t MinHeapSize                              = 6815736                                   {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-11.0.13
+PATH=F:/sts-4.11.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;F:/sts-4.11.0.RELEASE//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Java\jdk-11.0.13;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Git\cmd;C:\ProgramData\chocolatey\bin;D:\node-js\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Program Files\heroku\bin;C:\Users\user\AppData\Roaming\npm;D:\Conteudos estudos\heroku\bin;F:\sts-4.11.0.RELEASE;
+USERNAME=user
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 92 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.2788)
+OS uptime: 0 days 1:47 hours
+
+CPU: total 2 (initial active 2) 
+
+Memory: 4k page, system-wide physical 3928M (591M free)
+TotalPageFile size 6277M (AvailPageFile size 1348M)
+current process WorkingSet (physical memory assigned to process): 8M, peak: 8M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: OpenJDK 64-Bit Server VM (16.0.1+9-24) for windows-amd64 JRE (16.0.1+9-24), built on Mar 26 2021 19:30:07 by "mach5one" with MS VC++ 16.7 (VS2019)
+
+END.
