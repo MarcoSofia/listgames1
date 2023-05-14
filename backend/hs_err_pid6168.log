@@ -17,7 +17,7 @@
 Command Line: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50752 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=dslist -Dfile.encoding=UTF-8 -XX:+ShowCodeDetailsInExceptionMessages com.marcossofia.dslist.DslistApplicationGame --spring.output.ansi.enabled=always
 
 Host: Intel(R) Celeron(R) CPU N3350 @ 1.10GHz, 2 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2788)
-Time: Thu May 11 01:25:07 2023 Hora padrão América do Sul Or. elapsed time: 0.169031 seconds (0d 0h 0m 0s)
+Time: Thu May 11 01:25:07 2023 Hora padrï¿½o Amï¿½rica do Sul Or. elapsed time: 0.169031 seconds (0d 0h 0m 0s)
 
 ---------------  T H R E A D  ---------------
 
