@@ -1,5 +1,7 @@
 package com.marcossofia.dslist.entities;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_game_list")
 public class GameList {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -16,6 +19,12 @@ public class GameList {
 
 	public GameList() {
 
+	}
+
+	public GameList(Long id, String name) {
+
+		this.id = id;
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -34,9 +43,21 @@ public class GameList {
 		this.name = name;
 	}
 
-	public GameList(Long id, String name) {
-		this.id = id;
-		this.name = name;
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GameList other = (GameList) obj;
+		return Objects.equals(id, other.id);
+	}
+	
 }

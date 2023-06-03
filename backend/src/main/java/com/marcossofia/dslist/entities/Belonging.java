@@ -13,6 +13,7 @@ public class Belonging {
 
 	@EmbeddedId
 	private BelongingPK id = new BelongingPK();
+	
 	private Integer Position;
 
 	public Belonging() {
